@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean name="address" class="com.santosh.collection.Address">
+
+<property name="city" value="Kathmandu"/>
+<property name="ward" value="Suryabinayak"/>
+
+<property name="wardno">
+<list>
+<value>1</value>
+<value>2</value>
+<value>3</value>
+<value>4</value>
+<value>5</value>
+<value>6</value>
+<value>7</value>
+</list>
+
+</property>
+
+
+<property name="houseno" value="101" />
+</bean>
+
+<bean name="Employee" class="com.santosh.collection.Employee">
+
+<property name="id" value="50"/>
+<property name="name" value="santosh Luitel" />
+
+<property name="address" ref="address"/>
+</bean>
+
+
+
+</beans>
